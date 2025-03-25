@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+### ☕ Coffee Order Frontend
 
-First, run the development server:
+A simple coffee ordering frontend built with **Next.js**, **ShadCN UI**, and **TypeScript**, designed to interact with a FastAPI backend.
+
+---
+
+### 🚀 Features
+
+- Select coffee type, size, and quantity
+- Submit orders to a FastAPI backend
+- View all submitted orders in real-time
+
+---
+
+### 🛠 Tech Stack
+
+- [Next.js 14](https://nextjs.org/)
+- [ShadCN UI](https://ui.shadcn.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+### 📦 Setup
+
+1. **Clone the repo**
+
+```bash
+git clone https://github.com/bokal2/coffee-house-frontend.git
+cd coffee-house-frontend
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Run the dev server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will run at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Backend API
 
-## Learn More
+This frontend expects the following FastAPI endpoints:
 
-To learn more about Next.js, take a look at the following resources:
+- `POST /orders` – Submit an order
+- `GET /orders` – Fetch all orders
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Each order should have this structure:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```json
+{
+  "id": 1,
+  "coffee_name": "Latte",
+  "size": "Medium",
+  "quantity": 2,
+  "created_at": "2025-03-25T10:15:00Z"
+}
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT — free to use, modify, and share.
